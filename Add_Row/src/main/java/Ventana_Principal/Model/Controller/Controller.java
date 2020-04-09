@@ -24,4 +24,8 @@ public class Controller {
     public void showRegisterPatients() {
         Main.WINDOW_PATIENT.show();
     }
+
+    public void showListadoPatients() {
+        Main.WINDOW_ALL.show();
+    }
 }

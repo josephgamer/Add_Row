@@ -42,6 +42,7 @@ public class View extends WindowJFrame implements Observer {
         this.setJMenuBar(menuPrincipal);
         this.add(back);
         eventActionListenerItem1();
+        eventActionListenerItem2();
     }
 
     public void addJInternalFrame(Component c) {
@@ -51,6 +52,12 @@ public class View extends WindowJFrame implements Observer {
     private void eventActionListenerItem1() {
         this.item1.addActionListener(actionEvent -> {
             controller.showRegisterPatients();
+        });
+    }
+
+    private void eventActionListenerItem2() {
+        this.item2.addActionListener(actionEvent -> {
+            controller.showListadoPatients();
         });
     }
 
