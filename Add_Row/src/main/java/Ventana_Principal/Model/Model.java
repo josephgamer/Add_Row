@@ -5,17 +5,17 @@ import java.util.Observer;
 
 /**
  * @author Esteban
- * @created 09/04/2020 - 11:05 a. m.
+ * @created 09/04/2020 - 12:03 p. m.
  */
-public class ModelPrincipal extends Observable {
+public class Model extends Observable {
 
-    public ModelPrincipal(){}
+    public Model() {
 
+    }
 
-    public void addOserver(Observer o) {
+    public void addObserver(Observer o) {
         super.addObserver(o);
         this.setChanged();
         this.notifyObservers();
     }
-
 }

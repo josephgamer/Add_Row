@@ -20,7 +20,6 @@ public class View extends WindowJInternalFrame implements Observer {
         this.setClosable(true);
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         this.setSize(new Dimension(468, 262));
-        this.setVisible(true);
     }
 
     public Model getModel() {
