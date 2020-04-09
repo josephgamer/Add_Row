@@ -21,7 +21,7 @@ public class ViewPrincipal extends WindowJFrame implements Observer {
     private JMenuItem item2;
     private JDesktopPane background;
     ModelPrincipal model;
-    ControllerPrincipal controller;
+    ControllerPrincipal controller = new ControllerPrincipal();
 
     public ViewPrincipal() {
         super("Ventana Principal");
@@ -42,10 +42,17 @@ public class ViewPrincipal extends WindowJFrame implements Observer {
         this.menuPrincipal.add(menu2);
         this.setJMenuBar(menuPrincipal);
         this.add(background);
+        eventActionListenerItem1();
     }
 
-    public void addJInternalFrame(Component component) {
-        this.background.add(component);
+    public void addJInternalFrame(Component c) {
+        this.background.add(c);
+    }
+
+    public void eventActionListenerItem1() {
+        this.item1.addActionListener(actionEvent -> {
+            controller.showWindowRegister();
+        });
     }
 
     public ModelPrincipal getModel() {

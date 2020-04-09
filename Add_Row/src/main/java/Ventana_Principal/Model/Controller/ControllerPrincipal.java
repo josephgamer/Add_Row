@@ -1,5 +1,6 @@
 package Ventana_Principal.Model.Controller;
 
+import Main.Main;
 import Ventana_Principal.Model.ModelPrincipal;
 import Ventana_Principal.Model.View.ViewPrincipal;
 
@@ -19,4 +20,8 @@ public class ControllerPrincipal {
     }
 
     public ControllerPrincipal(){}
+
+    public void showWindowRegister() {
+        Main.WINDOW_PATIENT.show();
+    }
 }

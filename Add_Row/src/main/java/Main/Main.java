@@ -1,9 +1,5 @@
 package Main;
 
-import Ventana_Principal.Model.Controller.ControllerPrincipal;
-import Ventana_Principal.Model.ModelPrincipal;
-import Ventana_Principal.Model.View.ViewPrincipal;
-
 /**
  * @author Esteban
  * @created 09/04/2020 - 11:18 a. m.
@@ -11,10 +7,13 @@ import Ventana_Principal.Model.View.ViewPrincipal;
 public class Main {
 
     public static void main(String[] args) {
-        ModelPrincipal modelPrincipalWindow = new ModelPrincipal();
-        ViewPrincipal viewPrincipalWindow = new ViewPrincipal();
-        ControllerPrincipal controllerPrincipalWindow = new ControllerPrincipal
-                (modelPrincipalWindow, viewPrincipalWindow);
-        viewPrincipalWindow.setVisible(true);
+        Window_Patient.Model modelEdition = new Window_Patient.Model();
+        Window_Patient.View viewEdition = new Window_Patient.View();
+        Window_Patient.Controller controllerEdition = new Window_Patient.Controller(modelEdition, viewEdition);
+        WINDOW_PATIENT = controllerEdition;
+
+
     }
+
+    public static Window_Patient.Controller WINDOW_PATIENT;
 }
